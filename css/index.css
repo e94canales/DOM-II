@@ -135,6 +135,7 @@ html {
 html,
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #f4fffa;
 }
 h1,
 h2,
@@ -164,8 +165,7 @@ img {
   height: auto;
 }
 .container {
-  max-width: 800px;
-  width: 100%;
+  width: 800px;
   margin: 0 auto;
 }
 @media (max-width: 500px) {
@@ -174,12 +174,107 @@ img {
     margin: 0 5%;
   }
 }
+.off {
+  display: none;
+  z-index: -111111 !important;
+}
+.hovFx {
+  opacity: 80%;
+  cursor: pointer;
+}
+.linkHov {
+  color: #cf8a08 !important;
+}
+.popOut {
+  position: absolute;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  opacity: 100% !important;
+  border: 100px solid rgba(0, 0, 0, 0.349);
+  backdrop-filter: blur(3px);
+}
+.welcome-style {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1100;
+}
+.welcome-style .opacity {
+  background-color: #e1fff1;
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+}
+.welcome-style .opacity .welcome-contents {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.welcome-style .opacity .welcome-contents .h1-logo-container {
+  display: flex;
+  position: relative;
+}
+.welcome-style .opacity .welcome-contents .h1-logo-container h1 {
+  font-size: 40rem;
+  width: 100%;
+  padding: 14% 0.5%;
+  filter: drop-shadow(0 3px 5px gray);
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .welcome-style .opacity .welcome-contents .h1-logo-container h1 {
+    width: 100%;
+    text-align: center;
+  }
+}
+.welcome-style .opacity .welcome-contents .h1-logo-container .w {
+  align-self: center;
+  animation: wave 0.4s ease-out 1.5s infinite alternate;
+}
+.welcome-style .opacity .welcome-contents .h1-logo-container .e {
+  animation: wave 0.4s ease-out 2s infinite alternate;
+}
+@keyframes wave {
+  from {
+    color: #b61f1f;
+    margin-top: 1px;
+  }
+  to {
+    color: orange;
+    margin-top: 6px;
+  }
+}
+.welcome-style .opacity .welcome-contents h2 {
+  width: 100%;
+  font-family: "Shadows Into Light";
+  font-size: 5rem;
+  color: #fdff6b;
+  -webkit-text-stroke: 1px #bdbcbc;
+}
+.welcome-style .opacity .welcome-contents h2 .fas {
+  font-size: 3rem;
+}
+.welcome-style .opacity .welcome-contents img {
+  border-radius: 100%;
+  padding: 0 10%;
+  width: 70%;
+  filter: drop-shadow(0 3px 5px gray);
+}
 .main-navigation {
   width: 100%;
   height: 90px;
   background: #FFFFFF;
   border-bottom: 2px dashed #C0C0C0;
   position: fixed;
+  background-color: rgba(250, 250, 85, 0.836);
+  z-index: 100 !important;
 }
 .main-navigation .nav-container {
   height: 100%;
@@ -192,6 +287,38 @@ img {
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 10px;
+  }
+}
+.main-navigation .nav-container .h1-logo-container {
+  display: flex;
+  position: relative;
+}
+@media (max-width: 500px) {
+  .main-navigation .nav-container .h1-logo-container {
+    height: 50px;
+  }
+}
+@media (max-width: 500px) {
+  .main-navigation .nav-container .h1-logo-container h1 {
+    width: 100%;
+    text-align: center;
+  }
+}
+.main-navigation .nav-container .h1-logo-container .w {
+  align-self: center;
+  animation: wave 0.4s ease-out 1.5s infinite alternate;
+}
+.main-navigation .nav-container .h1-logo-container .e {
+  animation: wave 0.4s ease-out 2s infinite alternate;
+}
+@keyframes wave {
+  from {
+    color: #b61f1f;
+    margin-top: 1px;
+  }
+  to {
+    color: orange;
+    margin-top: 6px;
   }
 }
 @media (max-width: 500px) {
@@ -218,7 +345,7 @@ img {
 .footer {
   width: 100%;
   border-top: 2px dashed #C0C0C0;
-  background: #FFEBCD;
+  background: rgba(250, 250, 85, 0.836);
 }
 .footer p {
   text-align: center;
@@ -305,6 +432,40 @@ img {
 .home .content-destination img {
   border-radius: 10px;
 }
+.home .content-destination .rollit {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px grey solid;
+  margin-top: 5%;
+}
+.home .content-destination .rollit .dest {
+  padding: 5%;
+  text-align: center;
+  font-family: fantasy;
+}
+.home .content-destination .rollit button {
+  color: white;
+  font-family: 'Roboto';
+  font-size: 1.7rem;
+  width: 30%;
+  padding: 3%;
+  border-radius: 15px;
+  margin-bottom: 5%;
+  background-color: #272727;
+  align-self: center;
+  cursor: pointer;
+  outline: none;
+}
+.home .content-destination .rollit button:hover {
+  background-color: white;
+  color: black;
+}
+.home .content-destination .rollit p {
+  text-align: center;
+  font-family: fantasy;
+  font-size: 2rem;
+}
 .home .content-pick {
   padding-top: 30px;
   border-top: 2px dashed #C0C0C0;
@@ -335,7 +496,7 @@ img {
   align-items: center;
   width: 200px;
   height: 45px;
-  background-color: #17A2B8;
+  background-color: #272727;
   color: #FFFFFF;
   border: 1px solid #C0C0C0;
   cursor: pointer;

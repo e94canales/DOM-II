@@ -1,5 +1,5 @@
 .home {
-
+  
   .intro {
     padding: 90px 0 10px;
     border-bottom: 2px dashed @navigation-border;
@@ -85,6 +85,47 @@
     img {
       border-radius: 10px;
     }
+
+    .rollit {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      border: 1px grey solid;
+      margin-top: 5%;
+      .dest {
+        padding: 5%;
+        text-align: center;
+        font-family: fantasy;
+      }
+      button {
+        color: white;
+        font-family: 'Roboto';
+        font-size: 1.7rem;
+        width: 30%;
+        padding: 3%;
+        border-radius: 15px;
+        margin-bottom: 5%;
+        background-color: rgb(39, 39, 39);
+        align-self: center;
+        cursor: pointer;
+        outline: none;
+
+          &:hover {
+            background-color: white;
+            color: black;
+          }
+      }
+      p {
+        text-align: center;
+        font-family: fantasy;
+        font-size: 2rem;
+        // margin: 5% 0 0;
+      }
+      
+    }
+
+    
+
   }
 
   .content-pick {
@@ -107,7 +148,7 @@
       }
       
       .btn {
-        .button-creator(200px, 45px, @button-bg, @white, 1.8rem);     
+        .button-creator(200px, 45px, rgb(39, 39, 39), @white, 1.8rem);     
       }
     }
   }
